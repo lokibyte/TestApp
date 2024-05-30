@@ -1,8 +1,8 @@
 
 
-<ion-content [fullscreen]="true" color="light">
-  <ion-header class="ion-no-border" color="light">
-    <ion-toolbar color="light">
+<ion-content [fullscreen]="true" color="xlight" mode="ios">
+  <ion-header class="ion-no-border" color="xlight">
+    <ion-toolbar color="xlight">
       <ion-buttons slot="start" icononly>
       <ion-back-button mode="md" text="" default-href="/login"></ion-back-button>
     </ion-buttons>
@@ -12,40 +12,40 @@
   
   <div class="welcome_lbl_container ion-padding-bottom ion-padding-start">
     <div class="welcome_txt">Create your KAMAi profile</div>
-    <div class="description_txt">Search & apply to jobs from India's Best Job Site</div>
+    <div class="description_txt">Please fill in the required details</div>
   </div>
   <div class="input_container">
     <div class="" style="margin-bottom: 10px;">
       <ion-list style="border-radius: 10px;">
-        <ion-item>
-          <ion-input  label="First Name*" label-placement="floating" placeholder="Enter First Name"  class=""></ion-input>
+        <ion-item lines="none">
+          <ion-label position="stacked" class="input_lbl">Full Name*</ion-label>
+          <ion-input style="border: 1px solid lightgray;border-radius: 6px;" placeholder="Enter your full Name" required type="text" [(ngModel)]="name" (ionChange)="nameChange()"></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-input  label="Last Name*" label-placement="floating" placeholder="Enter Last Name"  class=""></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input  label="Email ID*" label-placement="floating" placeholder="Enter Email ID"  class=""></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input  label="Passowrd*" label-placement="floating" placeholder="Enter Passowrd"  class="" type="password"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input  label="Mobile Number*" label-placement="floating" placeholder="Enter Mobile Number"  class="" type="tel"></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input  label="Date of Birth*" label-placement="floating" placeholder="Enter Date of Birth"  class=""></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input  label="Location*" label-placement="floating" placeholder="Location"  class=""></ion-input>
-        </ion-item>
-        <ion-item>
-          <ion-input  label="Job Title*" label-placement="floating" placeholder="Enter Job Title"  class=""></ion-input>
+        
+        <ion-item lines="none">
+          <ion-label position="stacked" class="input_lbl">Location*</ion-label>
+          <ion-input style="border: 1px solid lightgray;border-radius: 6px;" placeholder="Enter your Location" required type="text" [(ngModel)]="location" (ionChange)="locationChange()"></ion-input>
         </ion-item>
       </ion-list>
+      
+      <div class="ion-padding">
+        <div class="input_lbl">Pick 5 jobs you’re interested in</div>
+        <div style="font-size: 13px;color: #545454;">Please fill in the required details</div>
+      </div>
+      <ion-searchbar class="custom" placeholder="Search for job roles" mode="md"></ion-searchbar>
+      <div class="job_roles">
+        <ion-chip class="btn" color="krypurple" [outline]="true" mode="ios" *ngFor="let role of jobroles;let i=index" [class.selectedCls]="role.selected === true" (click)="onSelect(role,i)">
+          <ion-label >{{role.name}}</ion-label>
+        </ion-chip>
+      </div>
+      <span class="ortxt">Or</span>
+      <div style="padding: 8px 16px 16px;">
+        <ion-checkbox color="primary" labelPlacement="end" (ionChange)="onisRoleChange($event)">Open for any Job Roles</ion-checkbox>
+      </div>
     </div>
   </div>
     <div class="policytext"><ion-text>By clicking register,you agree to KAMAi's <a href="#" color="primay" style="text-decoration: none;">Terms & conditions </a> and <a href="#" color="primay" style="text-decoration: none;">Privacy Policy</a></ion-text></div>
     <div style="text-align: center;">
-      <ion-button mode="md" size="default" fill="solid"  shape="round" class="logintbn ion-margin" (click)="doRegister()">Register</ion-button>
+      <ion-button mode="md" size="default" fill="solid"  shape="round" class="logintbn ion-margin" [ngClass]=" isDisabled ?'': 'validbtn' " (click)="doRegister()" [disabled]="isDisabled">Save & Next</ion-button>
     </div>
 </ion-content>

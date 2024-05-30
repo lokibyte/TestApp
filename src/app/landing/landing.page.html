@@ -1,0 +1,16 @@
+<ion-content [fullscreen]="true" class="background-image">
+  <div class="title_container ion-text-center" >
+    <div translate class="app_title">app.title</div>
+    <div translate class="app_description">app.landing.find_ur_dream_job</div>
+  </div>
+  <div class="landing_text" translate>app.landing.find_ur_job_easily</div>
+  <!-- <div class="lang_select_container" (click)="openChooseLangModal()">
+    <ion-text translate>app.landing.choose_ur_pref_language</ion-text>
+    <ion-icon name="caret-down"></ion-icon>
+  </div> -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="goToLoginPage()">
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

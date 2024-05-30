@@ -1,0 +1,52 @@
+
+<ion-content [fullscreen]="true" color="light">
+  <div class="welcome_lbl_container ion-padding">
+    <div class="welcome_txt">Log in to KAMAi</div>
+    <div class="description_txt">Sign in to access your account</div>
+  </div>
+  <div style="margin: 5px 8px;">
+    <div style="font-size: 0.8rem;margin-bottom: 5px;color: #434242;">You will recieve an OTP on this number</div>
+    <div style="font-size: 0.9rem;font-weight: 700;">+91-9741311167</div>
+  </div>
+   <div class="input_container">
+    <div class="ion-margin-bottom">
+      <ion-label style="font-size: 13px;font-weight: 500;" color="primary" class="">Enter OTP</ion-label>
+      <ion-grid id="myotp" mode="ios" class="ion-text-center">
+          <ion-row id="myotpgridrow" mode="ios">
+              <ion-col id="myotpgridrowcol1" mode="ios" size="2">
+                  <ion-input id="myotpotp1" maxlength="1" minlength="1" mode="md" type="tel" class="myotpotp" style="--border-radius:6px">
+                  </ion-input>
+              </ion-col>
+              <ion-col id="myotpgridrowcol2" mode="ios" size="2">
+                  <ion-input id="myotpotp2" maxlength="1" minlength="1" mode="md" type="tel" class="myotpotp" style="--border-radius:6px">
+                  </ion-input>
+              </ion-col>
+              <ion-col id="myotpgridrowcol3" mode="ios" size="2">
+                  <ion-input id="myotpotp3" maxlength="1" minlength="1" mode="md" type="tel" class="myotpotp" style="--border-radius:6px">
+                  </ion-input>
+              </ion-col>
+              <ion-col id="myotpgridrowcol4" mode="ios" size="2">
+                  <ion-input id="myotpotp4" maxlength="1" minlength="1" mode="md" type="tel" class="myotpotp" style="--border-radius:6px">
+                  </ion-input>
+              </ion-col>
+              <ion-col id="myotpgridrowcol5" mode="ios" size="2">
+                  <ion-input id="myotpotp5" maxlength="1" minlength="1" mode="md" type="tel" class="myotpotp" style="--border-radius:6px">
+                  </ion-input>
+              </ion-col>
+              <ion-col id="myotpgridrowcol6" mode="ios" size="2">
+                  <ion-input id="myotpotp5" maxlength="1" minlength="1" mode="md" type="tel" class="myotpotp" style="--border-radius:6px">
+                  </ion-input>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+      <!-- <span class="spantext">You'll get an OTP within 50  seconds</span> -->
+      <span class="spantext">Didn't recieve an OTP? <ion-text color="primary" style="font-weight: 700;font-size: 0.8rem;margin: 0 8px;">Resend </ion-text></span>
+    </div>
+
+    <div style="text-align: end;">
+      <ion-button mode="md" size="default" fill="solid"  size="small" shape="round" class="logintbn" (click)="goToHome()">Log in </ion-button>
+    </div>
+      
+    
+  </div>
+</ion-content>

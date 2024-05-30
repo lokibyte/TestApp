@@ -1,0 +1,51 @@
+
+
+<ion-content [fullscreen]="true" color="light">
+  <ion-header class="ion-no-border" color="light">
+    <ion-toolbar color="light">
+      <ion-buttons slot="start" icononly>
+      <ion-back-button mode="md" text="" default-href="/login"></ion-back-button>
+    </ion-buttons>
+      <ion-title></ion-title>
+    </ion-toolbar>
+  </ion-header>  
+  
+  <div class="welcome_lbl_container ion-padding-bottom ion-padding-start">
+    <div class="welcome_txt">Create your KAMAi profile</div>
+    <div class="description_txt">Search & apply to jobs from India's Best Job Site</div>
+  </div>
+  <div class="input_container">
+    <div class="" style="margin-bottom: 10px;">
+      <ion-list style="border-radius: 10px;">
+        <ion-item>
+          <ion-input  label="First Name*" label-placement="floating" placeholder="Enter First Name"  class=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  label="Last Name*" label-placement="floating" placeholder="Enter Last Name"  class=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  label="Email ID*" label-placement="floating" placeholder="Enter Email ID"  class=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  label="Passowrd*" label-placement="floating" placeholder="Enter Passowrd"  class="" type="password"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  label="Mobile Number*" label-placement="floating" placeholder="Enter Mobile Number"  class="" type="tel"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  label="Date of Birth*" label-placement="floating" placeholder="Enter Date of Birth"  class=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  label="Location*" label-placement="floating" placeholder="Location"  class=""></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input  label="Job Title*" label-placement="floating" placeholder="Enter Job Title"  class=""></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+  </div>
+    <div class="policytext"><ion-text>By clicking register,you agree to KAMAi's <a href="#" color="primay" style="text-decoration: none;">Terms & conditions </a> and <a href="#" color="primay" style="text-decoration: none;">Privacy Policy</a></ion-text></div>
+    <div style="text-align: center;">
+      <ion-button mode="md" size="default" fill="solid"  shape="round" class="logintbn ion-margin" (click)="doRegister()">Register</ion-button>
+    </div>
+</ion-content>

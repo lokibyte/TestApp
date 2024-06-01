@@ -40,4 +40,8 @@ export class LoginPage implements OnInit {
     console.info('login api',this.login_form.value);
     this.doLogin();
   }
+  // fresh code for new changes
+  doSignUp(){
+    this.router.navigate(['/register']);
+  }
 }

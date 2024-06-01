@@ -1,54 +1,23 @@
-
-<ion-content [fullscreen]="true" color="light">
+<ion-content [fullscreen]="true" class="ion-padding">
+  
   <div class="welcome_lbl_container ion-padding">
-    <div class="welcome_txt">Welcome Back</div>
-    <div class="description_txt">Sign in to access your account</div>
+    <div class="welcome_txt" translate>app.language.welcome_to <span class="app_title" translate>app.title</span></div>
+    <div class="description_txt" >Login to your account!</div>
   </div>
-  <div class="job_promotion_lbl gradient_txt" translate>app.login.tenlakh_plus</div>
-   <div class="input_container">
-    <form [formGroup]="login_form" (ngSubmit)="onSubmit()" novalidate>
-    <div>
-      
-        <ion-input  label="Email" type="email" formControlName="email" label-placement="floating"  placeholder="{{'app.login.email_lbl' | translate}}" class=""></ion-input>
-          <div class="error_msg">
-            <ng-container *ngIf="submitted || this.login_form.controls?.email?.touched && this.login_form.controls?.email?.invalid">
-              <ng-container *ngIf="errorControl.email.errors?.required">
-                <ion-text color="danger">Email is required.</ion-text>
-              </ng-container>
-              <ng-container *ngIf="errorControl.email.errors?.pattern">
-                <ion-text color="danger">Please provide valid email.</ion-text>
-              </ng-container>
-            </ng-container>
-          </div>
-    
-        <ion-input  label="Password" formControlName="password" label-placement="floating" placeholder="{{'app.login.pwd_lbl' | translate}}"  type="password" class="passowrdinput">
-        </ion-input>
-        <div class="error_msg">
-          <ng-container *ngIf="submitted || this.login_form.controls?.password?.touched && this.login_form.controls?.password?.invalid">
-            <ng-container *ngIf="errorControl.password.errors?.required">
-              <ion-text color="danger">Password is required.</ion-text>
-            </ng-container>
-            <ng-container *ngIf="errorControl.password.errors?.minlength">
-              <ion-text color="danger">Password must be at least 6 characters.</ion-text>
-            </ng-container>
-          </ng-container>
-        </div>
-
-        <div class="rem_forgt_lbls">
-            <div class="remember" >
-              <ion-checkbox labelPlacement="end" name="rememberme" id="rememberme"></ion-checkbox><label for="rememberme" class="rem_lbl">Remember me?</label>
-            </div>
-            <div class="" style="font-weight: 600;"><a style="font-weight: 600;font-size: 0.8rem;text-decoration: none;" [routerLink]="['/resetpassword']">Forgot Password?</a></div>
-        </div>
-      
-    </div>
-    <div style="text-align: end;">
-      <ion-button mode="md" size="default" fill="outline" size="small" shape="round" class="logintbn ion-margin" [routerLink]="['/login-phone']">Log in with OTP</ion-button>
-      <ion-button mode="md" size="default" fill="solid"  size="small" shape="round" class="otpbtn" type="submit">Log in</ion-button>
-    </div>
-  </form>
-    <div class="new_member_lbl">
-      New Member? <a style="font-size: 1rem;" [routerLink]="['/register']">Signup now</a>
-    </div>
+  
+  <div class="ion-padding">
+    <ion-input mode="md"  fill="outline" placeholder="Mobile Number"></ion-input>
+    <div style="text-align: center;margin: 12px 0px;">“or”</div>
+    <ion-input mode="md"  fill="outline" placeholder="kumar.singh@gmail.com"></ion-input>
+  </div>
+  
+  <div class="center">
+    <ion-button mode="md"  style="--background:var(--ion-color-krypurple);color:#fff;height:50px;width:90%;margin-top:20%;">Login</ion-button>
+  </div>
+  <div style="margin-top:15%;text-align:center;">
+    <span style="color: #111812;font-size:14px;font-weight:400;"></span>I’m a New user, <ion-text style="    color: var(--ion-color-primary);font-size: 14px;font-weight: 700;">SIGN UP</ion-text>
+  </div>
+  <div style="text-align:center;margin-top:6%;">
+    <ion-button mode="md" size="default" fill="solid"  shape="round" class="signupbtn ion-margin" (click)="doSignUp()">Sign Up</ion-button>
   </div>
 </ion-content>

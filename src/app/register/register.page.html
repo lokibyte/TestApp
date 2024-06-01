@@ -38,14 +38,14 @@
           <ion-label >{{role.name}}</ion-label>
         </ion-chip>
       </div>
-      <span class="ortxt">Or</span>
-      <div style="padding: 8px 16px 16px;">
-        <ion-checkbox color="primary" labelPlacement="end" (ionChange)="onisRoleChange($event)">Open for any Job Roles</ion-checkbox>
+      <div style="text-align: center;margin: 12px 0px;">“or”</div>
+      <div style="text-align:center">
+        <ion-button mode="md" size="default" fill="solid"  shape="round" class="openrolebtn ion-margin">Open for any Job Role</ion-button>
       </div>
     </div>
   </div>
-    <div class="policytext"><ion-text>By clicking register,you agree to KAMAi's <a href="#" color="primay" style="text-decoration: none;">Terms & conditions </a> and <a href="#" color="primay" style="text-decoration: none;">Privacy Policy</a></ion-text></div>
-    <div style="text-align: center;">
-      <ion-button mode="md" size="default" fill="solid"  shape="round" class="logintbn ion-margin" [ngClass]=" isDisabled ?'': 'validbtn' " (click)="doRegister()" [disabled]="isDisabled">Save & Next</ion-button>
+    
+    <div style="text-align: center;margin-bottom: 10%;">
+      <ion-button mode="md" size="default" fill="solid"  shape="round" class="registerbtn ion-margin" [ngClass]=" isDisabled ?'': 'validbtn' " (click)="doRegister()" [disabled]="isDisabled">Save & Next</ion-button>
     </div>
 </ion-content>

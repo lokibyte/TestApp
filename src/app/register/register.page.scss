@@ -67,14 +67,15 @@ ion-checkbox::part(container) {
   }
 }
 
-.logintbn{
-  height: 40px;
-  width: 60%;
+.registerbtn{
+  height: 36px;
+  width: 90%;
   font-size: 14px;
   letter-spacing: 0px;
-  font-weight: 700;
+  // font-weight: 700;
   text-transform: initial !important;
   --background: #737373;
+  color:#000;
 }
 .otpbtn{
   height: 40px;
@@ -142,4 +143,7 @@ ion-searchbar.custom {
 }
 .validbtn{
   --background:var(--ion-color-primary);
+}
+.openrolebtn{
+  text-transform: initial;
 }
